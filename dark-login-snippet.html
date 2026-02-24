@@ -1,0 +1,96 @@
+<div class="mg-container">
+    <h2 class="mg-h2">Login</h2>
+    <div class="mg-inputbox">
+        <input type="text" placeholder="" required>
+        <span>Username</span>
+    </div>
+    <div class="mg-inputbox">
+        <input type="password" placeholder="" required>
+        <span>Password</span>
+    </div>
+    <button class="mg-login-btn">
+        Login
+    </button>
+    <p style="position: fixed; bottom: 3%; left: 3%; color: #334155;">Created by: Marcos Gabriel</p>
+</div>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #E2E8F0;
+    }
+
+    .mg-container {
+        background-color: rgba(30, 41, 59, 0.7);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 50px;
+        border-radius: 20px;
+        box-shadow: -10px 10px 30px rgba(0, 0, 0, 0.3);
+        text-align: center;
+        max-width: 400px;
+    }
+
+    .mg-h2 {
+        padding-bottom: 20px;
+    }
+
+    .mg-inputbox {
+        position: relative;
+        margin: 20px 0;
+    }
+
+    .mg-inputbox input {
+        width: 100%;
+        padding: 12px 15px;
+        background: none;
+        border: none;
+        outline: none;
+        font-size: 18px;
+        border-bottom: 2px solid #334155;
+        border-radius: 10px;
+        transition: 0.4s all;
+    }
+
+    .mg-inputbox input:focus {
+        border-color: #38BDF8;
+        box-shadow: 0 5px 15px rgba(0, 255, 255, 0.3);
+    }
+
+    .mg-inputbox span{
+        position: absolute;
+        top: 50%;
+        left: 15px;
+        pointer-events: none;
+        font-size: 16px;
+        transition: 0.4s;
+        transform: translateY(-50%);
+    }
+
+    .mg-inputbox input:focus + span, .inputbox input:not(:placeholder-shown) + span{
+        top: 5px;
+        font-size: 12px;
+        color: #38BDF8;
+    }
+
+
+    .mg-login-btn {
+        background: linear-gradient(90deg, #38BDF8, #334155);
+        border: none;
+        padding: 12px 30px;
+        border-radius: 25px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.4s;
+        margin-top: 10px;
+    }
+
+    .mg-login-btn:hover {
+        box-shadow: 0 5px 15px rgba(0, 255, 255, 0.3);
+        transform: scale(110%);
+    }
+</style>

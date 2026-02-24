@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login GUI MG - Light Mode</title>
+    <meta name="autor" content="Marcos Gabriel" />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #1e293b;
+      }
+
+      body {
+        min-height: 100vh;
+        background:
+          radial-gradient(circle at top right, #38bdf822, #f1f5f9 40%), #f1f5f9;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .mg-container {
+        background-color: rgba(255, 255, 255, 0.5);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid rgba(255, 255, 255, 0.8);
+        padding: 50px;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        text-align: center;
+        max-width: 400px;
+        width: 90%;
+      }
+
+      .mg-h2 {
+        padding-bottom: 20px;
+      }
+
+      .mg-inputbox {
+        position: relative;
+        margin: 20px 0;
+      }
+
+      .mg-inputbox input {
+        width: 100%;
+        padding: 12px 15px;
+        background: none;
+        border: none;
+        outline: none;
+        font-size: 18px;
+        border-bottom: 2px solid #cbd5e1;
+        border-radius: 10px;
+        transition: 0.4s all;
+        color: #1e293b;
+      }
+
+      .mg-inputbox input:focus {
+        border-color: #0ea5e9;
+        box-shadow: 0 5px 15px rgba(14, 165, 233, 0.1);
+      }
+
+      .mg-inputbox span {
+        position: absolute;
+        top: 50%;
+        left: 15px;
+        pointer-events: none;
+        font-size: 16px;
+        transition: 0.4s;
+        transform: translateY(-50%);
+        color: #64748b;
+      }
+
+      .mg-inputbox input:focus + span,
+      .mg-inputbox input:not(:placeholder-shown) + span {
+        top: 5px;
+        font-size: 12px;
+        color: #0ea5e9;
+        font-weight: bold;
+      }
+
+      .mg-login-btn {
+        background: linear-gradient(90deg, #0ea5e9, #38bdf8);
+        color: white;
+        border: none;
+        padding: 12px 30px;
+        border-radius: 25px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.4s;
+        margin-top: 10px;
+        width: 100%;
+      }
+
+      .mg-login-btn:hover {
+        box-shadow: 0 5px 15px rgba(14, 165, 233, 0.4);
+        transform: scale(105%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="mg-container">
+      <h2 class="mg-h2">Login</h2>
+      <div class="mg-inputbox">
+        <input type="text" placeholder=" " required />
+        <span>Username</span>
+      </div>
+      <div class="mg-inputbox">
+        <input type="password" placeholder=" " required />
+        <span>Password</span>
+      </div>
+      <button class="mg-login-btn">Login</button>
+      <p
+        style="
+          position: fixed;
+          bottom: 3%;
+          left: 3%;
+          color: #94a3b8;
+          font-size: 14px;
+        "
+      >
+        Created by: Marcos Gabriel
+      </p>
+    </div>
+  </body>
+</html>
